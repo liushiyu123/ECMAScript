@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let obj1 = {x: 1, y: 2, arr: [1,2,3]};
+        let obj2 = {x: 10};
+
+        // 浅拷贝
+        Object.assign(obj2, obj1, {x: 100, z: 1000});
+        console.log(obj2);
+
+
+        // create
+
+
+        // let obj3 = Object.create({a: 1, b: 2});
+        // console.log(obj3);
+
+
+        // 通过 . [] 等方式添加或修改的属性，configurable\enumerable\value\writable默认是true
+        let obj4 = {x: 1};
+
+        obj4.y = 10;
+
+        // 通过 defineProperty 添加或修改的属性，configurable\enumerable\value\writable默认是false
+        
+        Object.defineProperty( obj4, 'z', {
+            // 描述了该属性的一些详细的细节
+            value: 100,
+            writable: true,
+            enumerable: true
+        } );
+
+        console.log(obj4);
+
+        for (let attr in obj4) {
+            console.log(attr);
+        }
+        
+
+
+        var obj5 = {x: 1};
+        // Object.prototype.xx = 100;
+        Object.defineProperty( Object.prototype, 'xx', {
+            value: 100,
+            enumerable: false
+        } );
+
+        for (let attr in obj5) {
+            console.log(attr);
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+        /*
+            作用域：变量的作用范围
+                全局 - 非函数
+                函数 - 函数包含
+
+                块作用域 - 一对 {} 包含的范围
+        */
+
+        // {
+        //     var a = 1;  //var 不支持 {}
+        //     let b = 2;
+        //     const c = 3;
+        // }
+
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+
+
+        // console.log(a);
+        // let a = 1;
+
+        // let a = 1;
+        // let a = 2;
+
+
+        // PI
+        // const a = 1;
+        // // a = 2;
+        // console.log(a);
+
+        // const arr = [1,2,3];
+        // arr = ['a'];
+        // arr.push(4);
+        // console.log(arr);
+
+        const arr1 = Object.freeze([1,2,3]);    //freeze冻结    //递归
+        // arr1.push(4);
+        // console.log(arr1);
+
+        // console.log(Object.isFrozen(arr1))
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+            对象简介表示法
+                当对象的key与对应的属性所引用的变量或函数同名的时候，可以简写成一个
+        */
+
+        var a = 1;
+        var fn = function() {};
+
+        // var obj = {
+        //     a: a,
+        //     fn: fn
+        // }
+
+        //简写
+        var obj = {
+            a,
+            fn
+        };
+
+        /*
+            属性名表达式
+        */
+        var x = 'miaov';
+        var obj1 = {
+            [x]: 1
+        };
+        // obj1['x'] = 1;
+
+
+        // obj1[x] = 1;
+        console.log(obj1);
+
+    </script>
+
+</body>
+</html>

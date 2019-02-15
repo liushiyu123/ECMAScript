@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        // includes
+
+        // console.log( ['a', 'c', 'd'].includes('c') );
+
+        var arr1 = ['a', 'b', 'c'];
+
+        // arr1.forEach( function(v, k, s) {
+        //     console.log(v, k, s);
+        //     console.log(this);
+        // }, arr1 );
+
+        // function forEach(data, callback, context) {
+        //     for (var i=0; i<data.length; i++) {
+        //         callback.call(context, data[i], i, data);
+        //     }
+        // }
+
+        // forEach(arr1, function(v, k, s) {
+        //     console.log(v, k, s);
+        //     console.log(this);
+        // }, 1 );
+
+
+        let arr2 = [1,6,8,2,4,10];  // 全选功能 - 课后实现
+
+        // [...inputs].every()
+
+        let rs = arr2.every( v => {
+            return v > 5;
+        } );
+        console.log(rs);
+
+        let rs1 = arr2.some( v => { //多选一
+            return v > 5;
+        } );
+        console.log(rs1);
+
+
+        // 新数组的值是源数组中其中一个，但是新数组的长度是可能不一样的
+        let arr3 = arr2.filter( v => {
+            return v > 5;
+        } );
+        console.log(arr3);
+
+        // 新数组的值可以和源数组不一致，但是长度是一致的
+        let arr4 = arr2.map( v => {
+            return v * 10;
+        } );
+        console.log(arr4);
+
+        // reduce  [1,6,8,2,4,10]
+        let rs3 = arr2.reduce( function( prev, current ) {
+            return prev + current;
+        }, 0 ); //0 表示结果的初始值
+        console.log(rs3);
+
+    </script>
+</body>
+</html>

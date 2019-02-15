@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+    /*
+    
+    Set
+        类似数组、但是值是无序的
+        无重复值
+    */
+
+    // let s1 = new Set();
+
+    // s1.add('a');
+    // s1.add('a');
+
+    // console.log(s1);
+
+
+    let arr1 = ['a', 'b', 'c', 'a', 'c'];
+
+    arr1 = [...new Set(arr1)];
+
+    console.log(arr1);
+
+    // for (let v of new Set(arr1)) {
+    //     console.log(v);
+    // }
+
+    
+
+    document.onclick = function() {
+        //this
+        // this => document
+
+
+        // function fn() {
+        //     console.log(this);
+        // }
+
+        // let fn = () => {
+        //     console.log(this);
+        // }
+
+        // fn();
+        // button.onclick = fn;
+    }
+
+    
+    </script>
+
+</body>
+</html>

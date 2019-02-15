@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    
+        /*
+            反引号
+            保持内容格式    
+
+            变量表达式解析：`${表达式}`
+        */
+
+        let name = 'miaov';
+
+
+        var str = `
+<ul>
+    <li></li>
+</ul>
+        <h1>${1+1}</h1>
+        <h1>${Math.random()}</h1>
+
+        <h2 dataName=${name}}></h2>
+        `; 
+
+        console.log(str);
+
+    </script>
+
+</body>
+</html>

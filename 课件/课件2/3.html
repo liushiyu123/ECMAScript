@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul>
+        <li>1111</li>
+        <li>2222</li>
+        <li>3333</li>
+    </ul>
+
+    <script>
+    
+    var lis = document.querySelectorAll('li');
+
+    for (let i=0; i<lis.length; i++) {
+        lis[i].onclick = function() {
+
+            // setTimeout(function() {
+            //     this.style.background = 'red';
+            // }, 1000);
+
+            //this
+            let fn = () => {
+                this.style.background = 'red';
+            };
+
+            setTimeout(fn, 1000);
+
+        }
+    }
+
+    function fn1() {
+        console.log(arguments);
+    }
+
+    fn1(1,2,3);
+
+    let fn2 = () => {
+        console.log(arguments);
+    }
+
+    fn2(1,2,3);
+    
+    </script>
+
+</body>
+</html>

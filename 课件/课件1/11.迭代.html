@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    
+        /*
+            for...of
+
+        */
+
+        var arr = ['a', 'b' ,'c'];
+
+        // for (var attr in arr) {
+        //     console.log(attr, arr[attr]);
+        // }
+
+        // for (var attr of arr) {
+        //     console.log(attr);
+        // }
+
+        var elements = document.querySelectorAll('*');
+
+        // for (var attr of elements) {
+        //     console.log(attr);
+        // }
+
+        /*
+            迭代对象
+                实现了迭代器的对象
+                迭代器：方法 [Symbol.iterator]
+        */
+
+        
+
+
+        var obj = {
+            left: 100,
+            top: 200
+        };
+
+        // 迭代协议
+        obj[Symbol.iterator] = function() {
+            let keys = Object.keys(obj);    //['left','top']
+            let len = keys.length;
+            let n = 0;
+            
+
+            return {
+                next: function() {
+
+                    if (n < len) {
+                        return {
+                            value: {k: keys[n], v: obj[keys[n++]]},
+                            done: false
+                        }
+                    } else {
+                        return {
+                            done: true
+                        }
+                    }
+
+                    // if (a < 10) {
+                    //     return {
+                    //         value: a,
+                    //         done: false
+                    //     }
+                    // } else {
+                    //     return {
+                    //         value: '',
+                    //         done: true
+                    //     }
+                    // }
+                }
+            }
+        }
+        
+        // obj[Symbol.iterator]().next() => {done: true}
+        for (var {k, v} of obj) { //of 是一个可迭代的对象
+            console.log(k, v);
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // let students = [
+        //     {name: 'aaa'},
+        //     {name: 'bbb'},
+        //     {name: 'ccc'}
+        // ];
+
+
+        const Person = (function(){
+
+            // 把对象与某个性别关联起来
+            let _gender = new WeakMap();
+
+            function P(name, gender) {
+                this.name = name;
+
+                _gender.set(this, gender);
+            }
+
+            P.prototype.getGender = function() {
+                return _gender.get(this);
+            }
+
+            P.prototype.setGender = function(newGender) {
+                _gender.set(this, newGender);
+            }
+
+            P.getGenders = function() {
+                return _gender;
+            }
+
+            return P;
+
+        })();
+
+
+        let p1 = new Person('莫涛', '男');
+        let p2 = new Person('童斌', '男');
+
+        p1.setGender('女');
+        console.log( p1.getGender() );
+        console.log( p2.getGender() );
+
+        setInterval(function() {
+            console.log( Person.getGenders() );
+        }, 1000);
+    </script>
+
+</body>
+</html>

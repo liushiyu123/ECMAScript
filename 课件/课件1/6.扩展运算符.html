@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+            扩展运算符
+                ...
+                把数组/对象转成参数序列（使用逗号分隔的序列）
+                ['a,'b','c'] => 'a','b','c'
+                {left:100, top:200} => left: 100, top: 200
+        */
+
+        var arr1 = [1,7,3,6,2];
+        var arr2 = ['a', 'b', 'c'];
+
+        // console.log( Math.max(arr1[0], arr1[1], arr1[2]) );
+
+        // console.log( Math.max( ...arr1 ) );
+
+        // console.log( [...arr1, 'maiov', ...arr2] );  
+
+        let obj1 = {left:100, top: 200};
+        let obj2 = {width: 200, height: 200};
+
+        let obj3= {
+            ...obj1,
+            ...obj2
+        };
+
+        console.log(obj3);
+
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button>按钮</button>
+
+    <div></div>
+
+    <script>
+    
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+
+        // btn.onclick = function() {
+
+        //     // 同步操作
+        //     alert('hello'); //耗时，用户不确定，任务就不继续
+
+        // }
+
+        // 异步
+        // let i = 0;
+        // setInterval(() => {
+        //     div.innerHTML = i++;
+        // }, 100);
+
+
+
+        // for (var i=0; i<100000000; i++) {
+
+        // }
+
+        // 队列
+        // 任务1->任务二->任务三
+
+        // 解决：异步编程问题，不是解决异步
+
+        // callback hell
+
+        setTimeout(() => {
+            console.log(1);
+
+            setTimeout(() => {
+                console.log(2);
+
+                setTimeout(() => {
+                    console.log(3);
+
+                    // ...
+                }, 100);
+
+                setTimeout(() => {
+                    console.log(4);
+
+                    // ...
+                }, 100);
+
+            }, 100);
+
+        }, 100);
+    
+    </script>
+
+</body>
+</html>
